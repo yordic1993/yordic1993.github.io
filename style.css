@@ -37,7 +37,7 @@ body {
 
 #paginaRuleta {
   display: none; /* Ocultar la página de la ruleta inicialmente */
-  background: url("https://github.com/yordic1993/yordic1993.github.io/raw/main/fondo2.jpg") no-repeat center center fixed;
+  background: url("https://github.com/yordic1993/yordic1993.github.io/raw/main/fondo1.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
