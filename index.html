@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ruleta Bonvoy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div id="paginaPrincipal" class="pagina">
+        <h1>Ruleta Bonvoy</h1>
+        <button id="botonIngresar">Ingresar</button>
+    </div>
+    <div id="paginaRuleta" class="pagina" style="display: none;">
+        <div class="idiomas">
+            <button id="botonEspanol">Español</button>
+            <button id="botonIngles">Inglés</button>
+        </div>
+        <div class="contenedor">
+            <div class="ruleta-container">
+                <div class="puntero"></div>
+                <canvas id="ruleta" width="300" height="300"></canvas>
+            </div>
+            <button id="botonGirar">Girar</button>
+            <div id="resultado"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
