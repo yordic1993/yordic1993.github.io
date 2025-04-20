@@ -17,7 +17,7 @@ body {
 }
 
 #paginaPrincipal {
-  background: url("C:/Users/ydela258/OneDrive - Marriott International/Desktop/Ruleta chat/fondo2.jpg") no-repeat center center fixed;
+  background: url("https://github.com/yordic1993/yordic1993.github.io/raw/main/fondo2.jpg") no-repeat center center fixed;
   background-size: contain; /* Ajustar el fondo para que se aprecie todo */
   justify-content: flex-start; /* Posicionar el contenido en la parte superior */
 }
