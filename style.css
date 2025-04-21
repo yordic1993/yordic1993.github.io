@@ -18,25 +18,25 @@ body {
 
 #paginaPrincipal {
   background: url("https://github.com/yordic1993/yordic1993.github.io/raw/main/fondo2.jpg") no-repeat center center fixed;
-  background-size: contain; /* Ajustar el fondo para que se aprecie todo */
-  justify-content: flex-start; /* Posicionar el contenido en la parte superior */
+  background-size: cover; /* Cambiado a cover para que la imagen cubra toda la pantalla */
+  justify-content: flex-start;
 }
 
 #paginaPrincipal h1 {
   font-size: 48px;
   margin-bottom: 20px;
-  margin-top: 40px; /* Añadir margen superior para separar el texto del borde */
+  margin-top: 40px;
 }
 
 #paginaPrincipal button {
   padding: 10px 20px;
   font-size: 18px;
   cursor: pointer;
-  margin-top: 40px; /* Añadir margen superior para bajar el botón */
+  margin-top: 40px;
 }
 
 #paginaRuleta {
-  display: none; /* Ocultar la página de la ruleta inicialmente */
+  display: none;
   background: url("https://github.com/yordic1993/yordic1993.github.io/raw/main/fondo1.jpg") no-repeat center center fixed;
   background-size: cover;
 }
@@ -58,7 +58,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+  background: rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 10px;
   position: relative;
@@ -67,8 +67,9 @@ body {
 
 .ruleta-container {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
 }
 
 .puntero {
@@ -85,9 +86,11 @@ body {
 }
 
 #ruleta {
+  width: 100%;
+  height: auto;
   border: 5px solid #333;
   border-radius: 50%;
-  background: #add8e6; /* Cambia este color al que desees */
+  background: #add8e6;
 }
 
 #resultado {
@@ -101,4 +104,27 @@ button {
   padding: 10px 20px;
   font-size: 18px;
   cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  #paginaPrincipal h1 {
+      font-size: 36px;
+  }
+
+  #paginaPrincipal button {
+      font-size: 16px;
+  }
+
+  .idiomas button {
+      font-size: 14px;
+  }
+
+  #resultado {
+      font-size: 20px;
+  }
+
+  button {
+      font-size: 16px;
+  }
 }
