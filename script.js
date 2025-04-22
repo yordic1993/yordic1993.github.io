@@ -58,35 +58,41 @@ let girando = false;
 let idiomaActual = 'es';
 
 function dibujarRuleta() {
-  for (let i = 0; i < segmentos; i++) {
-      ctx.beginPath();
-      ctx.moveTo(150, 150);
-      ctx.arc(150, 150, 150, i * anguloPorSegmento, (i + 1) * anguloPorSegmento);
-      ctx.closePath();
-      ctx.fillStyle = colores[i % colores.length];
-      ctx.fill();
-      ctx.save();
-      ctx.translate(150, 150);
-      ctx.rotate(i * anguloPorSegmento + anguloPorSegmento / 2);
-      ctx.fillStyle = "#000";
-      ctx.font = "bold 12px Arial";  // Reducir el tamaño de la fuente
-      ctx.textAlign = "center";
-      ctx.textBaseline = "middle";
-      const lineas = premios[idiomaActual][i].split(' ');
-      let textoCompleto = "";
-      for (let palabra of lineas) {
-          const lineaPrueba = textoCompleto + palabra + " ";
-          const medida = ctx.measureText(lineaPrueba).width;
-          if (medida > 100) {
-              ctx.fillText(textoCompleto.trim(), 90, -10);
-              textoCompleto = palabra + " ";
-          } else {
-              textoCompleto += palabra + " ";
-          }
-      }
-      ctx.fillText(textoCompleto.trim(), 90, 10);
-      ctx.restore();
-  }
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+    const radius = Math.min(centerX, centerY);
+
+    for (let i = 0; i < segmentos; i++) {
+        ctx.beginPath();
+        ctx.moveTo(centerX, centerY);
+        ctx.arc(centerX, centerY, radius, i * anguloPorSegmento, (i + 1) * anguloPorSegmento);
+        ctx.closePath();
+        ctx.fillStyle = colores[i % colores.length];
+        ctx.fill();
+
+        ctx.save();
+        ctx.translate(centerX, centerY);
+        ctx.rotate(i * anguloPorSegmento + anguloPorSegmento / 2);
+        ctx.fillStyle = "#000";
+        ctx.font = "bold " + (radius * 0.08) + "px Arial"; // Ajustar tamaño de texto proporcional
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+
+        const lineas = premios[idiomaActual][i].split(' ');
+        let textoCompleto = "";
+        for (let palabra of lineas) {
+            const lineaPrueba = textoCompleto + palabra + " ";
+            const medida = ctx.measureText(lineaPrueba).width;
+            if (medida > radius * 0.7) { // Limitar ancho del texto
+                ctx.fillText(textoCompleto.trim(), radius * 0.6, -10);
+                textoCompleto = palabra + " ";
+            } else {
+                textoCompleto += palabra + " ";
+            }
+        }
+        ctx.fillText(textoCompleto.trim(), radius * 0.6, 10);
+        ctx.restore();
+    }
 }
 
 
@@ -98,15 +104,18 @@ function girar() {
     const rotacion = vueltas * 2 * Math.PI + extra;
     const duracion = 4000;
     const inicio = performance.now();
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+
     function animar(tiempo) {
         const progreso = Math.min((tiempo - inicio) / duracion, 1);
         const ease = 1 - Math.pow(1 - progreso, 3);
         const angulo = anguloActual + rotacion * ease;
-        ctx.clearRect(0, 0, 300, 300);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.save();
-        ctx.translate(150, 150);
+        ctx.translate(centerX, centerY); // Nuevo centro dinámico
         ctx.rotate(angulo);
-        ctx.translate(-150, -150);
+        ctx.translate(-centerX, -centerY);
         dibujarRuleta();
         ctx.restore();
         if (progreso < 1) {
@@ -119,6 +128,7 @@ function girar() {
     }
     requestAnimationFrame(animar);
 }
+
 
 function mostrarResultado() {
     const anguloFinal = anguloActual % (2 * Math.PI);
