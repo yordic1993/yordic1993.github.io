@@ -50,7 +50,7 @@ const mensajes = {
 
 
 
-const colores = ["#F1BA88", "#7AE2CF", "#FFDBDB", "#03A791", "#FFC6C6", "#81E7AF"];
+const colores = ["#EAC7C7", "#EAE0DA", "#FFDBDB", "#A0C3D2", "#FFC6C6", "#EAE0DA"];
 const segmentos = premios.es.length;
 const anguloPorSegmento = 2 * Math.PI / segmentos;
 let anguloActual = 0;
