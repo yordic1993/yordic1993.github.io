@@ -12,7 +12,7 @@ const premios = {
   es: [
       "Masaje para 1 persona",
       "Piqueo en nuestro bar",
-      "Descuento especial en alimentos",
+      "Descuento super especial",
       "500 puntos Marriott Bonvoy",
       "300 puntos Marriott Bonvoy",
       "30% descuento SPA"
@@ -20,7 +20,7 @@ const premios = {
   en: [
       "Massage for 1 people",
       "Snack at our bar",
-      "Special discount on food",
+      "Super special discount",
       "1000 Marriott Bonvoy points",
       "500 Marriott Bonvoy points",
       "30% SPA discount"
@@ -33,7 +33,7 @@ const mensajes = {
   es: {
       "Masaje para 1 persona": "Ganaste un Masaje para 1 persona!\nDisfruta de un tratamiento relajante enfocado en cabeza, cuello y hombros.",
       "Piqueo en nuestro bar": "Disfruta de un exquisito piqueo seleccionado especialmente por nuestro Chef.",
-      "Descuento especial en alimentos": "Sumérgete en una experiencia gastronómica exclusiva en manos de nuestro chef ejecutivo con el 50% de descuento",
+      "Descuento super especial": "Sumérgete en una experiencia gastronómica exclusiva en manos de nuestro chef ejecutivo con el 50% de descuento",
       "500 puntos Marriott Bonvoy": "Felicidades !! Ganaste 500 puntos Marriott Bonvoy",
       "300 puntos Marriott Bonvoy": "Felicidades !! Ganaste 300 puntos Marriott Bonvoy",
       "30% descuento SPA": "Felicidades !! Ganaste un 30% de descuento en nuestro SPA"
@@ -41,7 +41,7 @@ const mensajes = {
   en: {
       "Massage for 1 people": "You won a Massage for 1 people!\nEnjoy a relaxing treatment focused on head, neck, and shoulders.",
       "Snack at our bar": "Enjoy a delicious snack specially selected by our Chef.",
-      "Set menu for 2": "Immerse yourself in an exclusive gastronomic experience led by our executive chef with a 50% discount.",
+      "Super special discount": "Immerse yourself in an exclusive gastronomic experience led by our executive chef with a 50% discount.",
       "500 Marriott Bonvoy points": "Congratulations !! You won 500 Marriott Bonvoy points",
       "300 Marriott Bonvoy points": "Congratulations !! You won 300 Marriott Bonvoy points",
       "30% SPA discount": "Congratulations !! You won a 30% discount at our SPA"
