@@ -12,7 +12,7 @@ const premios = {
   es: [
       "Masaje para 1 persona",
       "Piqueo en nuestro bar",
-      "Descuento super especial",
+      "Descuento especial",
       "500 puntos Marriott Bonvoy",
       "300 puntos Marriott Bonvoy",
       "30% descuento SPA"
@@ -20,9 +20,9 @@ const premios = {
   en: [
       "Massage for 1 people",
       "Snack at our bar",
-      "Super special discount",
-      "1000 Marriott Bonvoy points",
+      "Special discount",
       "500 Marriott Bonvoy points",
+      "300 Marriott Bonvoy points",
       "30% SPA discount"
   ]
 };
