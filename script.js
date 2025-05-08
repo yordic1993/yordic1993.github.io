@@ -10,17 +10,17 @@ const paginaRuleta = document.getElementById('paginaRuleta');
 
 const premios = {
   es: [
-      "Masaje para 2 personas",
+      "Masaje para 1 persona",
       "Piqueo en nuestro bar",
-      "Set menú para 2",
-      "1000 puntos Marriott Bonvoy",
+      "Descuento especial en alimentos",
       "500 puntos Marriott Bonvoy",
+      "300 puntos Marriott Bonvoy",
       "30% descuento SPA"
   ],
   en: [
-      "Massage for 2 people",
+      "Massage for 1 people",
       "Snack at our bar",
-      "Set menu for 2",
+      "Special discount on food",
       "1000 Marriott Bonvoy points",
       "500 Marriott Bonvoy points",
       "30% SPA discount"
@@ -31,19 +31,19 @@ const premios = {
 
 const mensajes = {
   es: {
-      "Masaje para 2 personas": "Ganaste un Masaje para 2 personas!\nDisfruta de un tratamiento relajante enfocado en cabeza, cuello y hombros.",
+      "Masaje para 1 persona": "Ganaste un Masaje para 1 persona!\nDisfruta de un tratamiento relajante enfocado en cabeza, cuello y hombros.",
       "Piqueo en nuestro bar": "Disfruta de un exquisito piqueo seleccionado especialmente por nuestro Chef.",
-      "Set menú para 2": "Disfruta de un exquisito menú de 3 tiempos con platos diseñados exclusivamente por nuestro Chef.",
-      "1000 puntos Marriott Bonvoy": "Felicidades !! Ganaste 1000 puntos Marriott Bonvoy",
+      "Descuento especial en alimentos": "Sumérgete en una experiencia gastronómica exclusiva en manos de nuestro chef ejecutivo con el 50% de descuento",
       "500 puntos Marriott Bonvoy": "Felicidades !! Ganaste 500 puntos Marriott Bonvoy",
+      "300 puntos Marriott Bonvoy": "Felicidades !! Ganaste 300 puntos Marriott Bonvoy",
       "30% descuento SPA": "Felicidades !! Ganaste un 30% de descuento en nuestro SPA"
   },
   en: {
-      "Massage for 2 people": "You won a Massage for 2 people!\nEnjoy a relaxing treatment focused on head, neck, and shoulders.",
+      "Massage for 1 people": "You won a Massage for 1 people!\nEnjoy a relaxing treatment focused on head, neck, and shoulders.",
       "Snack at our bar": "Enjoy a delicious snack specially selected by our Chef.",
-      "Set menu for 2": "Enjoy a delicious 3-course menu with dishes exclusively designed by our Chef.",
-      "1000 Marriott Bonvoy points": "Congratulations !! You won 1000 Marriott Bonvoy points",
+      "Set menu for 2": "Immerse yourself in an exclusive gastronomic experience led by our executive chef with a 50% discount.",
       "500 Marriott Bonvoy points": "Congratulations !! You won 500 Marriott Bonvoy points",
+      "300 Marriott Bonvoy points": "Congratulations !! You won 300 Marriott Bonvoy points",
       "30% SPA discount": "Congratulations !! You won a 30% discount at our SPA"
   }
 };
